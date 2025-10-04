@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# No Backspace
 
-## Getting Started
 
-First, run the development server:
+**Write without editing. Type without interrupting. Think without censoring.**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+When you write with a pen and paper, your hand moves at the speed of thought. Words flow onto the page in a continuous stream. You can't instantly erase them, so you don't. You keep moving forward, following ideas wherever they lead.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+But when you type? Everything changes.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The backspace key sits there, always tempting. A word feels wrong, so you delete it. A sentence doesn't land perfectly, so you rewrite it. An idea seems half-baked, so you erase it before it's fully formed. You're editing before you've finished thinking.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The result? You're not writing. You're not drafting. You're trapped in a cycle of creation and destruction, never letting your thoughts breathe long enough to discover where they actually want to go.
 
-## Learn More
+Studies show that constant self-editing during the drafting phase:
 
-To learn more about Next.js, take a look at the following resources:
+- Interrupts creative flow and breaks concentration
+- Filters out unconventional ideas before they can develop
+- Increases writing anxiety and perfectionism
+- Dramatically slows down the drafting process
+- Leads to safer, less original writing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The best writers know the truth: writing and editing are different processes. You can't do both at once.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+No Backspace (No BS) remove the backspace and delete keys entirely while you write. No second-guessing. No erasure. No breaking your flow to fix something you'll revise later anyway.
 
-## Deploy on Vercel
+Just pure, forward momentum.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Write your messy first draft with the confidence that every idea will make it onto the page. You can edit it out later. Right now, you write.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Without the comfort of deletion, you commit to your thoughts. You finish sentences you would have abandoned. You discover ideas hiding behind the ones you would have backspaced.
+
+You write faster. You write stranger. You write more honestly.
+
+And when you're done, you have a real draft—messy, imperfect, and full of possibility. Now you can edit. Now you can refine. But first, you had to write.
+
+Separate creation from criticism. Write without the BS.
+
