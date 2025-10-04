@@ -1,20 +1,40 @@
 "use client";
 
-import { EditorContent, useEditor } from "@tiptap/react";
+import { EditorContent, useEditor, Extension } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import React from "react";
 import MenuBar from "./menu-bar";
 import TextAlign from "@tiptap/extension-text-align";
 import Highlight from "@tiptap/extension-highlight";
 
-interface RichTextEditorProps {
+const disableDeletion = () => {
+  return Extension.create({
+    name: 'disableDeletion',
+    addKeyboardShortcuts() {
+      return {
+        Backspace: () => {
+          return true;
+        },
+        Delete: () => {
+          return true;
+        }
+      };
+    }
+  });
+};
+
+interface EditorProps {
   content: string;
   onChange: (content: string) => void;
+  flowMode: boolean;
+  setFlowMode: (value: boolean) => void;
 }
-export default function RichTextEditor({
+export default function Editor({
   content,
   onChange,
-}: RichTextEditorProps) {
+  flowMode,
+  setFlowMode
+}: EditorProps) {
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
@@ -33,6 +53,7 @@ export default function RichTextEditor({
         types: ["heading", "paragraph"],
       }),
       Highlight,
+      ...(flowMode ? [disableDeletion()] : []),
     ],
     content: content,
     editorProps: {
@@ -41,15 +62,16 @@ export default function RichTextEditor({
       },
     },
     onUpdate: ({ editor }) => {
-      // console.log(editor.getHTML());
       onChange(editor.getHTML());
     },
-  });
+  },
+    [flowMode]
+  );
 
   return (
-    <div>
-      <MenuBar editor={editor} />
-      <EditorContent editor={editor} />;
+    <div className={flowMode ? 'font-comic-sans' : 'font-sans'}>
+      <MenuBar editor={editor} flowMode={flowMode} setFlowMode={setFlowMode} />
+      <EditorContent editor={editor} />
     </div>
   );
 }

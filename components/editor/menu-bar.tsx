@@ -13,9 +13,10 @@ import {
   Strikethrough,
 } from "lucide-react";
 import { Toggle } from "../ui/toggle";
+import { Switch } from "../ui/switch";
 import { Editor } from "@tiptap/react";
 
-export default function MenuBar({ editor }: { editor: Editor | null }) {
+export default function MenuBar({ editor, flowMode, setFlowMode }: { editor: Editor | null, flowMode: boolean, setFlowMode: (value: boolean) => void }) {
   if (!editor) {
     return null;
   }
@@ -84,16 +85,22 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
   ];
 
   return (
-    <div className="border rounded-md p-1 mb-1 bg-slate-50 space-x-2 z-50">
-      {Options.map((option, index) => (
-        <Toggle
-          key={index}
-          pressed={option.preesed}
-          onPressedChange={option.onClick}
-        >
-          {option.icon}
-        </Toggle>
-      ))}
+    <div className="border rounded-md p-2 mb-1 bg-slate-50 z-50 flex items-center justify-between">
+      <div className="flex space-between">
+        {Options.map((option, index) => (
+          <Toggle
+            key={index}
+            pressed={option.preesed}
+            onPressedChange={option.onClick}
+          >
+            {option.icon}
+          </Toggle>
+        ))}
+      </div>
+      <div className="flex items-center gap-2 font-sans">
+        No BS
+        <Switch checked={flowMode} onCheckedChange={setFlowMode} />
+      </div>
     </div>
   );
 }
